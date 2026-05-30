@@ -7,7 +7,7 @@ import { useSolicitudes } from "../Context/SolicitudesContext";
 import "./DetalleObjeto.css";
 
 const DetalleObjeto = () => {
-  const { id } = useParams(); // lee el id de la URL (/objeto/1)
+  const { id } = useParams(); // lee el id de la URL 
   const navigate = useNavigate();
   const { user } = useAuth();
   const { objetos } = useObjetos();
