@@ -4,25 +4,23 @@ import { AuthProvider, useAuth } from "./Context/AuthContext";
 import { ObjetosProvider } from "./Context/ObjetosContext";
 import { SolicitudesProvider } from "./Context/SolicitudesContext";
 
-import MainLayout from "./Componentes/MainLayout";
-import Inicio from "./Componentes/Inicio";
-import Explorar from "./Componentes/Explorar";
-import Login from "./Componentes/Login";
-import Register from "./Componentes/Register";
-import Perfil from "./Componentes/Perfil";
-import MisObjetos from "./Componentes/MisObjetos";
-import DetalleObjeto from "./Componentes/DetalleObjeto";
-import MisSolicitudes from "./Componentes/MisSolicitudes";
-import SolicitudesRecibidas from "./Componentes/SolicitudesRecibidas";
+import MainLayout from "./Components/MainLayout";
+import Inicio from "./Components/Inicio";
+import Explorar from "./Components/Explorar";
+import Login from "./Iniciar-Registrar-Sesion/login";
+import Register from "./Iniciar-Registrar-Sesion/register";
+import Perfil from "./Components/Perfil";
+import MisObjetos from "./Components/MisObjetos";
+import DetalleObjeto from "./Components/DetalleObjeto";
+import MisSolicitudes from "./Components/MisSolicitudes";
+import SolicitudesRecibidas from "./Components/SolicitudesRecibidas";
+
+const RutaProtegida = ({ children }) => {
+  const { user } = useAuth();
+  return user ? children : <Navigate to="/login" />;
+};
 
 function App() {
-
-  // ← AQUÍ adentro, no afuera
-  const RutaProtegida = ({ children }) => {
-    const { user } = useAuth();
-    return user ? children : <Navigate to="/login" />;
-  };
-
   return (
     <AuthProvider>
       <ObjetosProvider>
