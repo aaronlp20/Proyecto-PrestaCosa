@@ -1,16 +1,44 @@
-# React + Vite
+# 📦 PrestaCosa - Plataforma de Préstamos Vecinales
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+PrestaCosa es una aplicación web diseñada para fomentar la economía circular y la colaboración comunitaria. Permite a los vecinos prestar y pedir prestados objetos cotidianos (herramientas, artículos deportivos, electrodomésticos, etc.) que normalmente solo se usan una vez o muy pocas veces, ahorrando dinero y cuidando el medio ambiente.
 
-Currently, two official plugins are available:
+## ✨ Características Principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* **Sistema de Autenticación:** Registro e inicio de sesión de usuarios (actualmente simulado en el frontend).
+* **Catálogo de Objetos:** Visualización de todos los artículos disponibles en la comunidad.
+* **Filtros y Búsqueda:** Búsqueda por texto y filtrado por categorías (Herramientas, Deportes, Cocina, etc.).
+* **Gestión de Objetos (CRUD):** Los usuarios pueden publicar, editar y eliminar sus propios objetos.
+* **Perfil de Usuario:** Panel para gestionar la información personal (nombre, email).
+* **Diseño Responsivo:** Interfaz moderna y adaptable a dispositivos móviles utilizando CSS puro.
 
-## React Compiler
+## 🛠️ Tecnologías Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Este proyecto está construido en el Frontend con las siguientes tecnologías:
 
-## Expanding the ESLint configuration
+* **[React 19](https://react.dev/):** Librería principal para la construcción de interfaces de usuario.
+* **[Vite](https://vitejs.dev/):** Herramienta de construcción rápida para proyectos web modernos.
+* **[React Router DOM v7](https://reactrouter.com/):** Para el enrutamiento y la navegación fluida entre páginas (SPA).
+* **Context API:** Para el manejo del estado global de la aplicación (`AuthContext` para sesiones y `ObjetosContext` para el catálogo).
+* **CSS3:** Estilos propios modulares y responsivos.
+* **Tabler Icons:** Para la iconografía de la aplicación.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Instalación y Ejecución Local
+
+Sigue estos pasos para correr el proyecto en tu entorno local:
+
+1. **Clona el repositorio:**
+   ```bash
+   git clone https://github.com/aaronlp20/Proyecto-PrestaCosa.git
+
+2. **Instala las dependencias:**
+   ```bash
+   npm install
+
+3. **Inicia el servidor de desarrollo**
+   ```bash
+   npm run dev
+
+3. **Abre tu navegador en la ruta que te indique la terminal** 
+* (usualmente http://localhost:5173).
+
+Nota: Puedes iniciar sesión usando los datos de prueba configurados en src/data/usuarios.js (ej. Email: carlos@gmail.com / Password: 123456).
