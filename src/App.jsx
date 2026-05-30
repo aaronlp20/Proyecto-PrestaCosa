@@ -6,15 +6,6 @@ import { SolicitudesProvider } from "./Context/SolicitudesContext";
 
 import MainLayout from "./Components/MainLayout";
 import Inicio from "./Components/Inicio";
-<<<<<<< HEAD
-import Explorar from "./Components/Explorar.jsx";
-import Login from "./Components/Iniciar-Registrar-Sesion/login";
-import Register from "./Components/Iniciar-Registrar-Sesion/register";
-import Perfil from "./Components/Perfil/perfil";
-import MisObjetos from "./Components/Mis-Objetos/MisObjetos";
-import DetalleObjeto from "./Components/DetalleObjeto";
-import MisSolicitudes from "./Components/Mis-Solicitudes/MisSolicitudes";
-=======
 import Explorar from "./Components/Explorar";
 import Login from "./Iniciar-Registrar-Sesion/login";
 import Register from "./Iniciar-Registrar-Sesion/register";
@@ -22,7 +13,6 @@ import Perfil from "./Components/Perfil";
 import MisObjetos from "./Components/MisObjetos";
 import DetalleObjeto from "./Components/DetalleObjeto";
 import MisSolicitudes from "./Components/MisSolicitudes";
->>>>>>> main
 import SolicitudesRecibidas from "./Components/SolicitudesRecibidas";
 
 const RutaProtegida = ({ children }) => {
@@ -53,4 +43,5 @@ function App() {
     </AuthProvider>
   );
 }
+
 export default App;
