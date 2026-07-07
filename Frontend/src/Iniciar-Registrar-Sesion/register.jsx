@@ -20,7 +20,7 @@ const Register = () => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         if (form.password !== form.confirmar) {
@@ -29,9 +29,9 @@ const Register = () => {
         }
 
         setErrorLocal("");
-        const exitoso = register(form.nombre, form.email, form.password);
+        const exitoso = await register(form.nombre, form.email, form.password);
         if (exitoso) {
-            navigate("/"); // redirige al inicio
+            navigate("/");
         }
     };
 

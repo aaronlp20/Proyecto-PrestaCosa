@@ -25,8 +25,8 @@ const SolicitudesRecibidas = () => {
   const pendientes = solicitudesRecibidas.filter((s) => s.estado === "pendiente");
   const resueltas  = solicitudesRecibidas.filter((s) => s.estado !== "pendiente");
 
-  const handleAprobar = (id) => {
-    const resultado = aprobarSolicitud(id);
+   const handleAprobar = async (id) => {
+    const resultado = await aprobarSolicitud(id);
 
     setMensajes((prev) => ({ ...prev, [id]: resultado }));
 
